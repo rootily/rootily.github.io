@@ -1,0 +1,137 @@
+
+body {
+  margin: 0;
+}
+
+h1  {
+  color: #99d6ff;
+  font-size: 24px;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  margin-left: 60px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  font-family: 'Averia Sans Libre', cursive;
+}
+
+p {
+  color: rgb(60,60,50);
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+  width: 603px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  z-index: 1;
+}
+
+em {
+  font-style: italic;
+}
+
+span {
+  color: #99d6ff;
+  font-family: 'Averia Sans Libre', cursive;
+  font-weight: bolder;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.black {
+  color: black;
+}
+
+.attrib {
+  color: rgb(100, 100, 100);
+  text-align: right;
+  font-size: 17px;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  font-family: 'Averia Sans Libre', cursive;
+  text-transform: lowercase;
+  letter-spacing: .8px;
+}
+
+.bg-header {
+  background-color: white;
+  margin: 0 0 30px 0;
+  padding: 20px;
+  text-align: left;
+}
+
+.circle {
+  background-color: rgba(250, 250, 120, .9);
+  width: 600px;
+  height: 3px;
+  position: absolute;
+  margin: 10px 100px;
+  margin-left: -400px;
+  border-radius: 50%;
+  z-index: -1;
+  transform: rotate(7deg);
+}
+
+.square {
+  background-color: rgba(250, 20, 20,.7);
+  border: dashed white 2px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+/*.curve {
+  width:1000px; height:100px;
+  border:solid 2px #000;
+  border-color: grey transparent transparent transparent;
+  border-radius: 99%/100px 20px 0 0;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: rotate(20deg);
+  z-index: -1;
+}*/
+
+#zero {
+  top: 28%;
+  left: 28%;
+  transform: rotate(-4deg);
+}
+
+#one {
+  top: 23%;
+  left: 29%;
+}
+
+#two {
+  top: 20%;
+  left: 30%;
+}
+
+#three {
+  top: 60%;
+  left: 70%;
+  transform: rotate(2deg);
+}
+
+#four {
+  top: 10%;
+  left: 20%;
+}
+
+#five {
+  top: 63%;
+  left: 38%;
+}
+
+#x {
+  border: white dotted 7px;
+  transform: rotate(45deg);
+  top: 637px;
+  left: 57%;
+  z-index: 1;
+}
