@@ -1,0 +1,86 @@
+
+body {
+  margin: 0;
+  background: linear-gradient(40deg, rgb(50,12,50), rgb(200,30,85));
+}
+
+h1  {
+  color: black;
+  font-size: 24px;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  font-weight: normal;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-bottom: 80px;
+  font-family: 'Crimson Text', serif;
+}
+
+p {
+  margin-right: auto;
+  margin-left: 200px;
+  line-height: 1.5;
+  width: 40%;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+}
+
+.lost {
+  color: cyan;
+  font-family: 'Averia Sans Libre', cursive;
+  /*text-decoration: underline;*/
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 6px;
+}
+
+.one {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.two {
+  line-height: 3;
+  letter-spacing: 1.3px;
+}
+
+.three {
+  line-height: 4;
+  letter-spacing: 1.6px;
+}
+
+.four {
+  line-height: 4;
+  letter-spacing: 2px;
+}
+
+.five {
+  line-height: 5;
+  letter-spacing: 2.6px;
+}
+
+.six {
+  line-height: 6;
+letter-spacing: 3.2px;
+}
+
+.seven {
+  line-height: 7;
+  letter-spacing: 5px;
+}
+
+.attrib {
+  color: rgb(110,20,75);
+  font-family: 'Averia Sans Libre', cursive;
+  text-align: right;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+}
+
+.bg-header {
+  margin: 0 0 30px 0;
+  padding: 20px;
+}

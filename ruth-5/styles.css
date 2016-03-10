@@ -1,0 +1,63 @@
+
+body {
+  margin: 0;
+}
+
+h1  {
+  color: rgba(153, 214, 255, .6);
+  font-size: 300px;
+  text-align: left;
+  font-weight: normal;
+  position: fixed;
+  top: -200px;
+  margin-left: 80px;
+  font-family: 'Inconsolata', courier;
+  z-index: 2;
+}
+
+p {
+  margin-top: 260px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+  width: 600px;
+  font-family: 'Inconsolata', courier;
+  font-size: 22px;
+}
+
+.attrib {
+  text-align: right;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  padding-right: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 34px;
+}
+
+.bg-header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  height: 200px;
+  width: 100%;
+}
+
+.footer {
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+  height: 200px;
+  width: 100%;
+}
+
+marquee {
+  width: 50px;
+  margin-top: 0px;
+  background-color: black;
+  color: white;
+  position: relative;
+  top: 6px;
+  border-radius: 20px;
+}

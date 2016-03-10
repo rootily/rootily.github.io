@@ -1,0 +1,44 @@
+
+body {
+  margin: 10px;
+  background: linear-gradient(white, darkblue, white);
+}
+
+h1  {
+  color: blue;
+  font-size: 16px;
+  text-align: right;
+  line-height: 1;
+  letter-spacing: .5px;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 8px;
+  font-family: 'Inconsolata', courier;
+}
+
+p {
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 2;
+  width: 100px;
+  font-family: 'Inconsolata', 'Crimson Text', courier;
+  font-size: 70px;
+  margin: 0;
+}
+
+.attrib {
+  text-align: right;
+  position: fixed;
+  top: 34%;
+  right: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  border: 8px red solid;
+  padding: 20px;
+}
+
+span {
+  font-size: 120%;
+}
