@@ -1,14 +1,17 @@
-<html>
+<!DOCTYPE html>
   <head>
-    <meta charset="utf-8">
-    <title>jQuery UI Draggable - Default functionality</title>
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
-    <script src="jQuery.js"></script>
-    <script src="jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="facetTest.css">
-    <link rel="stylesheet" href="animations.css">
-    <link href='https://fonts.googleapis.com/css?family=Palanquin:500' rel='stylesheet' type='text/css'>
-    <script>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ruth Lin">
+      <title>invisibilia</title>
+      <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+      <script src="jQuery.js"></script>
+      <script src="jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="facetTest.css">
+      <link rel="stylesheet" href="animations.css">
+      <link href='https://fonts.googleapis.com/css?family=Palanquin:500' rel='stylesheet' type='text/css'>
+      <script>
 
       //script for turning strings into separate word divs
       $(function() {
@@ -138,7 +141,7 @@
     <div class="draggable" class="ui-widget-content">fog</div>
     <div class="draggable" class="ui-widget-content">.</div>
     <div class="draggable" class="ui-widget-content">.</div><br>
-    <div id="object" class="sentence"><span class="invis">We all chipped in to buy cheese, olives and wine, and sat by candlelight debating art into the night.<br> In that vale of light
+    <div id="object" class="sentence"><span class="invis">We all chipped in to buy cheese, olives and wine, and sat by candlelight debating art into the night...<br> In that vale of light
 the city drifts anchorless upon the ocean.</span></div>
     <br>
     <div id="object" class="sentence2"><span class="invis">Afterward you look out at the snow-laced trees, which are orange from all the reflected street light. This is the way the world is. Orange snow under a purple sky.</span></div>
