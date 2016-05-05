@@ -1,0 +1,80 @@
+body {
+    background-image: url("FacetCollage.png");
+    background-repeat: repeat;
+    width: 5000px;
+    height: 5000px;
+    font-family: 'Palanquin', sans-serif;
+}
+
+div {
+}
+
+.draggable:hover {
+  color: rgba(247, 89, 40, 0.95);
+}
+
+.fixed {
+  position: fixed;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 2600px;
+}
+
+.sentence {
+  display: inline-block;
+  padding: 0.2em;
+}
+
+.invis {
+  display: none;
+}
+
+
+.draggable {
+  display: inline-block;
+  padding: 0.2em;
+  /*-webkit-filter: invert(50%); /* Chrome, Safari, Opera */*/
+   filter: invert(50%);
+   color: darkgray;
+}
+
+.line {
+  fill: none;
+
+}
+
+.lineText {
+  fill: white;
+  font-size: .3em;
+  letter-spacing: .01em;
+  opacity: .1;
+}
+
+/*.scroll {
+  animation: scroll 8s infinite;
+  -webkit-animation: scroll 8s infinite;
+}
+
+@keyframes scroll {
+	0% {
+		startOffset: 10%;
+	}
+	50% {
+		startOffset: 50%;
+	}
+	100% {
+		startOffset: 100%;
+	}
+}*/
+
+svg {
+  position: relative;
+  left: 140px;
+  top: 350px;
+  width: 2530px;
+}

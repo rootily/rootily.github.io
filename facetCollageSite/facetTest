@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+    <script src="jQuery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="facetTest.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:500' rel='stylesheet' type='text/css'>
+    <script>
+
+      //script for turning strings into separate word divs
+      $(function() {
+        var data =$('.sentence').text();
+        var arr = data.split(' ');
+        for ( var i = 0, l = arr.length; i < l; i++ ) {
+          $(".sentence").append("<div class='draggable' class='ui-widget-content'>" + arr[i] + "</div>");
+        }
+        // $(".sentence").html("<div class='draggable' class='ui-widget-content'>" + arr[0] + "</div><div class='draggable' class='ui-widget-content'>" + arr[1] + "</div><div class='draggable' class='ui-widget-content'>" + arr[2] + "</div><div class='draggable' class='ui-widget-content'>" + arr[3] + "</div><div class='draggable' class='ui-widget-content'>" + arr[4] + "</div><div class='draggable' class='ui-widget-content'>"  );
+      });
+      $(function() {
+        var data =$('.sentence2').text();
+        var arr = data.split(' ');
+        for ( var i = 0, l = arr.length; i < l; i++ ) {
+          $(".sentence2").append("<div class='draggable' class='ui-widget-content'>" + arr[i] + "</div>");
+        }
+      });
+      $(function() {
+        var data =$('.sentence3').text();
+        var arr = data.split(' ');
+        for ( var i = 0, l = arr.length; i < l; i++ ) {
+          $(".sentence3").append("<div class='draggable' class='ui-widget-content'>" + arr[i] + "</div>");
+        }
+      });
+      $(function() {
+        var data =$('.sentence4').text();
+        var arr = data.split(' ');
+        for ( var i = 0, l = arr.length; i < l; i++ ) {
+          $(".sentence4").append("<div class='draggable' class='ui-widget-content'>" + arr[i] + "</div><br>");
+        }
+      });
+
+      //script for making word divs draggable
+    $(function() {
+      $( ".draggable" ).draggable();
+      $('.draggable').mousemove(function () {
+        $(this).addClass('floating');
+        // $(this).addClass('fixed');
+      });
+
+      //script for switching #emotional words with other words at 5s intervals
+      (function(){
+          var words = [
+              'happy',
+              'morose',
+              'cool',
+              'lost'
+              ], i = 0;
+
+          setInterval(function(){
+              $('#emotional').fadeOut(function(){
+                  $(this).html(words[i=(i+1)%words.length]).fadeIn();
+              });
+          }, 5000);
+
+      })();
+
+      //script for switching #emotionally words with other words at 5s intervals
+      (function(){
+          var words = [
+              'happily',
+              'morosely',
+              'effervescently',
+              'languidly'
+              ], i = 0;
+
+          setInterval(function(){
+              $('#emotionally').fadeOut(function(){
+                  $(this).html(words[i=(i+1)%words.length]).fadeIn();
+              });
+             // 4 seconds
+          }, 4000);
+      })();
+    });
+    </script>
+  </head>
+  <body>
+
+    <!-- <div id="draggable" class="ui-widget-content">hey</div> -->
+    <!-- <span id="draggable" class="ui-widget-content">OOOOHEYMMMM</span> -->
+    <!-- <div id="draggable" class="ui-widget-content">heydiv</div> -->
+    <div class="draggable" class="ui-widget-content">When</div>
+    <div class="draggable" class="ui-widget-content">the</div>
+    <div class="draggable" class="ui-widget-content">gray</div>
+    <div class="draggable" class="ui-widget-content">film</div>
+    <div class="draggable" class="ui-widget-content">seems</div>
+    <div class="draggable" class="ui-widget-content">to</div>
+    <div class="draggable" class="ui-widget-content">settle</div>
+    <div class="draggable" class="ui-widget-content">over</div>
+    <div class="draggable" class="ui-widget-content"> ,</div>
+    <div class="draggable" class="ui-widget-content">Sadie</div>
+    <div class="draggable" class="ui-widget-content">will</div>
+    <div class="draggable" class="ui-widget-content">saunter</div>
+    <div class="draggable" class="ui-widget-content">over</div>
+    <div class="draggable" class="ui-widget-content">slicing</div>
+    <div class="draggable" class="ui-widget-content">like</div>
+    <div class="draggable" class="ui-widget-content">soap</div>
+    <div class="draggable" class="ui-widget-content">through</div>
+    <div class="draggable" class="ui-widget-content">grease</div>
+    <div class="draggable" class="ui-widget-content">light</div>
+    <div class="draggable" class="ui-widget-content">through</div>
+    <div class="draggable" class="ui-widget-content">fog</div>
+    <div class="draggable" class="ui-widget-content">.</div>
+    <div class="draggable" class="ui-widget-content">.</div>
+    <div id="object" class="draggable" class="ui-widget-content">.</div>
+    <br>
+    <div class="draggable" class="ui-widget-content">Once</div>
+    <div class="draggable" class="ui-widget-content">the</div>
+    <div class="draggable" class="ui-widget-content">gray</div>
+    <div class="draggable" class="ui-widget-content">films</div>
+    <div class="draggable" class="ui-widget-content">seem</div>
+    <div class="draggable" class="ui-widget-content">too</div>
+    <div class="draggable" class="ui-widget-content">settled</div>
+    <div class="draggable" class="ui-widget-content">over</div>
+    <div class="draggable" class="ui-widget-content"> ,</div>
+    <div class="draggable" class="ui-widget-content">Sad</div>
+    <div class="draggable" class="ui-widget-content">willingly</div>
+    <div class="draggable" class="ui-widget-content">saunters</div>
+    <div class="draggable" class="ui-widget-content">over</div>
+    <div class="draggable" class="ui-widget-content">slices</div>
+    <div class="draggable" class="ui-widget-content">like</div>
+    <div class="draggable" class="ui-widget-content">soapy</div>
+    <div class="draggable" class="ui-widget-content">thorough</div>
+    <div class="draggable" class="ui-widget-content">greasy</div>
+    <div class="draggable" class="ui-widget-content">lights</div>
+    <div class="draggable" class="ui-widget-content">through</div>
+    <div class="draggable" class="ui-widget-content">fog</div>
+    <div class="draggable" class="ui-widget-content">.</div>
+    <div class="draggable" class="ui-widget-content">.</div><br>
+    <div id="object" class="sentence"><span class="invis">We all chipped in to buy cheese, olives and wine, and sat by candlelight debating art into the night.<br> In that vale of light
+the city drifts anchorless upon the ocean.</span></div>
+    <br>
+    <div id="object" class="sentence2"><span class="invis">Afterward you look out at the snow-laced trees, which are orange from all the reflected street light. This is the way the world is. Orange snow under a purple sky.</span></div>
+    <div id="object" class="sentence3"><span class="invis">I believe that candy really did taste better when I was a kid, that it's aerodynamically impossible for a bumble bee to fly, that light is a wave and a particle, that there's a cat in a box somewhere who's alive and dead at the same time.</span></div>
+    <div id="object" class="sentence4"><span class="invis">I have since only very rarely seen the tree with the lights in it.</span></div>
+
+
+    <div id="emotionally" class="draggable" class="ui-widget-content">sadly</div>
+    <div id="emotional" class="draggable" class="ui-widget-content">sad</div>
+<br>
+<svg id="testPath" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="2 0 997.61 489.2">
+  <defs>
+    <style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.25px;opacity:0.2;}</style>
+  </defs>
+  <title>spongeWaves</title>
+  <path id="top" class="line" d="M86.61,168a121.06,121.06,0,0,0,62.84,24.78c8.73,0.8,17.82.7,25.77,4.38,16.21,7.49,26.8,29.75,44.43,26.89,5.2-.84,9.71-3.92,14.43-6.26,12.2-6.06,26.16-7.29,39.74-8.42,11.83-1,24.54-1.78,34.75,4.29,7,4.19,12,11.22,19.12,15.35,8.89,5.19,19.77,5.15,30.06,5l133-2.45c6.32-.12,13.33,0,18,4.31,4.42,4.09,5.36,10.8,9.22,15.42,9.72,11.65,28,3.36,42.36-1.67,22.65-8,47.5-5,71.32-2,12.84,1.64,25.83,3.32,37.89,8,7.92,3.09,15.48,7.48,23.9,8.66,13.65,1.91,26.78-4.86,39.95-8.92a105.16,105.16,0,0,1,63.7.68c25.21,8.38,46.45,26.08,71.5,34.93,11.41,4,23.53,6.19,34.35,11.58s20.61,15.13,21.54,27.2" transform="translate(62.96 -167.94)"/><path class="cls-1" d="M-62.6,657.13C-64.94,631-50.09,604.18-26.72,592.3c31-15.77,69.45-5.26,102.36-16.53C104.45,565.92,125,541,150.32,524c22.07-14.8,47.61-23.4,72.8-31.83,12.76-4.27,26-8.6,39.38-7.28,17.37,1.71,32.3,12.59,48.7,18.53,22.07,8,46.26,6.89,69.7,5.68l74.27-3.84c16.41-.85,32.93-1.69,49.24.31,20.75,2.55,40.89,9.68,61.79,10.43,19.39,0.7,38.48-4.12,57.59-7.45,42.59-7.41,87.36-7.29,128,7.49,28.44,10.34,55.89,27.93,86.09,26,9.62-.6,19-3.2,28.18-6.14a370.59,370.59,0,0,0,68.54-29.91" transform="translate(62.96 -167.94)"/><path class="cls-1" d="M228,203.91c3.54-1.21,7.08-2.43,10.68-3.44a103.81,103.81,0,0,1,85.79,14.17" transform="translate(62.96 -167.94)"/><path class="cls-1" d="M319.82,255.95a1160.24,1160.24,0,0,0-113.75,191.4" transform="translate(62.96 -167.94)"/>
+  <text>
+    <textPath class="lineText" xlink:href="#top">Afterward you look out at the snow-laced trees, which are orange from all the reflected street light. This is the way the world is. Orange snow under a purple sky. Afterward you look out at the snow-laced trees, which are orange from all the reflected street light. This is the way the world is. Orange snow under a purple sky. Afterward you look out at the snow-laced trees, which are orange from all the reflected street light.
+        <animate attributeName="startOffset" values="0;.7;1" dur="8s" repeatCount="indefinite" keyTimes="0;.2;1" />
+    </textPath>
+  </text>
+</svg>
+
+    <img src="spongeWaves.jpg">
+
+  </body>
+</html>
