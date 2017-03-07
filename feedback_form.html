@@ -31,8 +31,8 @@ textarea:focus {
   /*border: none;*/
   outline: none;
 }
-input {
-  font-family: 'EB Garamond', serif;
+#button {
+  font-family: 'EB Garamond', serif !important;
   font-size: 11pt;
   box-shadow: none;
 }
@@ -67,13 +67,14 @@ var object = r_text[i];
 var youHave = "You have in your hands " + r_text[i] + ".";
 document.write(youHave);
 	document.forms[0].youHaveA.value = object;
+  document.getElementById("hiddenHave").value = youHave.toString();
 //-->
 </script>
 </head>
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input type="hidden" name="youHaveA" value="$youHave"/>
+<input type="hidden" id="hiddenHave" name="youHaveA" value=""/>
 <table>
 <!-- <tr>
 <td>Email Address:</td>
@@ -84,7 +85,7 @@ document.write(youHave);
 <tr>
 <td><br><br>
 Tell me about it:<br><br><br><textarea rows="1" cols="10" name="body"></textarea>
-<br><br><br><input type="submit" value="Bury the thought." /></td>
+<br><br><br><input type="submit" id="button" value="Bury the thought." /></td>
 </tr>
 <tr><td>&nbsp;</td>
 <td>
