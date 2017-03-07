@@ -70,11 +70,11 @@ document.write("You have in your hands " + r_text[i] + ".");
 </script>
 </head>
 <body>
-<form action="send_mail.php" method="get">
+<form action="send_mail.php" method="post" enctype="text/plain">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
 <table>
 <!-- <tr>
-<td>Email Adress:</td>
+<td>Email Address:</td>
 <td>
 <input type="text" name="email_address" value="" maxlength="100" />
 </td>
