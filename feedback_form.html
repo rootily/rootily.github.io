@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Feedback Form</title>
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Karla" rel="stylesheet">
+<style>
+body {
+  font-family: 'EB Garamond', serif;
+  font-size: 11pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+  /*position: absolute;
+  top: 25%;*/
+  text-align: center;
+  margin-top: 10em;
+}
+
+h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 11pt;
+  align-items: center;
+  margin-top: 10em;
+}
+textarea {
+  border: none;
+  font-size: 100pt;
+  font-family: 'Karla', serif;
+}
+textarea:focus {
+  /*border: none;*/
+  outline: none;
+}
+input {
+  font-family: 'EB Garamond', serif;
+  font-size: 11pt;
+}
+</style>
+<script language="JavaScript">
+<!--
+var r_text = new Array ();
+r_text[0] = "an organ";
+r_text[1] = "a heavy biscuit";
+r_text[2] = "a brittle thing";
+r_text[3] = "a map";
+r_text[4] = "a liver";
+r_text[5] = "a heart";
+r_text[6] = "something precious";
+r_text[7] = "a writing device";
+r_text[8] = "an island";
+r_text[9] = "a bone";
+r_text[10] = "a fragile thing";
+r_text[11] = "an obelisk";
+r_text[12] = "a monument";
+r_text[13] = "a grenade";
+r_text[14] = "a meditation device";
+r_text[15] = "a heartbeat monitor";
+r_text[16] = "a sense of purpose";
+r_text[17] = "a lost thing";
+r_text[18] = "a space capsule";
+r_text[19] = "a baked egg";
+r_text[20] = "a volcanic substance";
+r_text[21] = "a gift";
+var i = Math.floor(22*Math.random())
+
+document.write("You have in your hands " + r_text[i] + ".");
+
+//-->
+</script>
+</head>
+<body>
+<form action="send_mail.php" method="post">
+  <!-- <form action="mailto:r@e.edu" method="post" enctype="text/plain"> -->
+<table>
+<!-- <tr>
+<td>Email Adress:</td>
+<td>
+<input type="text" name="email_address" value="" maxlength="100" />
+</td>
+</tr> -->
+<tr>
+<td><br><br>
+Tell me about it:<br><br><br><textarea rows="1" cols="10" name="comments"></textarea>
+<br><br><br><input type="submit" value="Bury the thought." /></td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>
+
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
