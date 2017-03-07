@@ -62,6 +62,6 @@ header( "Location: $error_page" );
 // else {
 mail( "$webmaster_email", "Object Data", $comments);
 // mail( "rlin@risd.edu", "Object Data", $comments, "From: $webmaster_email");
-header( "Location: $thankyou_page" );
+// header( "Location: $thankyou_page" );
 // }
 ?>
