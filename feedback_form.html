@@ -63,8 +63,9 @@ r_text[19] = "a baked egg";
 r_text[20] = "a piece of volcanic debris";
 r_text[21] = "a gift";
 var i = Math.floor(22*Math.random())
-
-document.write("You have in your hands " + r_text[i] + ".");
+var youHave = "You have in your hands " + r_text[i] + ".";
+document.write(youHave);
+	document.forms[0].youHaveA.value = youHave;
 
 //-->
 </script>
@@ -72,7 +73,7 @@ document.write("You have in your hands " + r_text[i] + ".");
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input type="hidden" name="_next" value="//rootily.github.io/thank_you.html" />
+<input type="hidden" id="youHaveA" name="youHaveA" value="" />
 <table>
 <!-- <tr>
 <td>Email Address:</td>
@@ -82,7 +83,7 @@ document.write("You have in your hands " + r_text[i] + ".");
 </tr> -->
 <tr>
 <td><br><br>
-Tell me about it:<br><br><br><textarea rows=".5" cols="10" name="body"></textarea>
+Tell me about it:<br><br><br><textarea rows="1" cols="10" name="body"></textarea>
 <br><br><br><input type="submit" value="Bury the thought." /></td>
 </tr>
 <tr><td>&nbsp;</td>
