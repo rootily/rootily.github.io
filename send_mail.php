@@ -1,14 +1,5 @@
 <?php
-$myFile = "testFile.txt";
-if(isset($_POST['fileWrite']) && !empty($_POST['fileWrite'])) {
-      $fileWrite = $_POST['fileWrite'];
-}
-if($fileWrite) {
-    $fh = fopen($myFile, 'a') or die("can't open file"); //Make sure you have permission
-    fwrite($fh, $fileWrite);
-    fclose($fh);
-    exec('/your/command /dev/null 2>/dev/null &');
-}
+
 /*
 This first bit sets the email address that you want the form to be submitted to.
 You will need to change this value to a valid email address that you can access.
@@ -28,7 +19,7 @@ This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.
 */
 // $email_address = $_REQUEST['email_address'] ;
-$comments = $_REQUEST['comments'] ;
+$comments = $_REQUEST['body'] ;
 
 /*
 The following function checks for email injection.

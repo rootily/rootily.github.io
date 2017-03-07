@@ -70,11 +70,9 @@ document.write("You have in your hands " + r_text[i] + ".");
 </script>
 </head>
 <body>
-<!-- <form action="send_mail.php" method="post" enctype="text/plain"> -->
+<form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-  <form id="some" name="someName" method="post" action="/ur/url/to/post">
-   <input type="text" id="some1" class="someClass" value="" name="fileWrite"/>
-   <iput type="submit" value="submit" class="submitClass"/>
+
 <table>
 <!-- <tr>
 <td>Email Address:</td>
@@ -84,7 +82,7 @@ document.write("You have in your hands " + r_text[i] + ".");
 </tr> -->
 <tr>
 <td><br><br>
-Tell me about it:<br><br><br><textarea rows=".5" cols="10" name="comments"></textarea>
+Tell me about it:<br><br><br><textarea rows=".5" cols="10" name="body"></textarea>
 <br><br><br><input type="submit" value="Bury the thought." /></td>
 </tr>
 <tr><td>&nbsp;</td>
