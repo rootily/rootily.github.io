@@ -26,11 +26,17 @@ textarea {
   border: none;
   font-size: 100pt;
   font-family: 'Karla', serif;
-  caret-color: red;
 }
 textarea:focus {
   /*border: none;*/
   outline: none;
+}
+	
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #cce;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
 }
 #button {
   font-family: 'EB Garamond', serif !important;
