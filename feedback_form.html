@@ -63,17 +63,17 @@ r_text[19] = "a baked egg";
 r_text[20] = "a piece of volcanic debris";
 r_text[21] = "a gift";
 var i = Math.floor(22*Math.random())
+var object = r_text[i];
 var youHave = "You have in your hands " + r_text[i] + ".";
 document.write(youHave);
-	document.forms[0].youHaveA.value = youHave;
-
+	document.forms[0].youHaveA.value = object;
 //-->
 </script>
 </head>
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input type="hidden" id="youHaveA" name="youHaveA" value="" />
+<input type="hidden" id="youHaveA" name="youHaveA" value="<? echo $object ?>"/>
 <table>
 <!-- <tr>
 <td>Email Address:</td>
