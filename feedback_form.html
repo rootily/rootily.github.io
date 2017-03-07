@@ -73,7 +73,7 @@ document.write(youHave);
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input type="hidden" id="youHaveA" name="youHaveA" value="<? echo $object ?>"/>
+<input type="hidden" id="youHaveA" name="<? echo $object ?>" value="<? echo $youHave ?>"/>
 <table>
 <!-- <tr>
 <td>Email Address:</td>
