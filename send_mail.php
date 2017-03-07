@@ -60,8 +60,8 @@ Specifically, it checks for carriage returns - typically used by spammers to inj
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 // else {
-// mail( "$webmaster_email", "Object Data", $comments, "From: someone");
-mail( "rlin@risd.edu", "Object Data", $comments, "From: $webmaster_email");
+mail( "$webmaster_email", "Object Data", $comments, "From: someone");
+// mail( "rlin@risd.edu", "Object Data", $comments, "From: $webmaster_email");
 // header( "Location: $thankyou_page" );
 // }
 ?>
