@@ -48,10 +48,10 @@ Specifically, it checks for carriage returns - typically used by spammers to inj
 // header( "Location: $feedback_page" );
 // }
 
-// If the form fields are empty, redirect to the error page.
-// if (empty($comments)) {
-// header( "Location: $error_page" );
-// }
+If the form fields are empty, redirect to the error page.
+if (empty($comments)) {
+header( "Location: $error_page" );
+}
 
 // If email injection is detected, redirect to the error page.
 // elseif ( isInjected($email_address) ) {
@@ -60,8 +60,8 @@ Specifically, it checks for carriage returns - typically used by spammers to inj
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 // else {
-mail( "$webmaster_email", "Object Data", $comments, "From: someone");
+mail( "$webmaster_email", "Object Data", $comments, "From: someone@rootily.github.io");
 // mail( "rlin@risd.edu", "Object Data", $comments, "From: $webmaster_email");
-// header( "Location: $thankyou_page" );
+header( "Location: $thankyou_page" );
 // }
 ?>
