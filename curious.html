@@ -71,7 +71,7 @@ r_text[20] = "a piece of volcanic debris";
 r_text[21] = "a heavy gift";
 var i = Math.floor(22*Math.random())
 var object = r_text[i];
-var youHave = "You have in your hands " + object + ".";
+var youHave = "You have in your hands " + r_text[i] + ".";
 // document.forms[0].youHaveA.value = object;
 //-->
 window.onload = document.getElementById("hiddenHave").value = youHave;
