@@ -72,16 +72,17 @@ r_text[21] = "a heavy gift";
 var i = Math.floor(22*Math.random())
 var object = r_text[i];
 var youHave = "You have in your hands " + r_text[i] + ".";
-// document.forms[0].youHaveA.value = object;
-document.getElementById("hiddenHave").value = youHave.toString();
+
 document.write(youHave);
+document.forms[0].youHaveA.value = object;
+document.getElementById("hiddenHave").value = youHave.toString();
 
 </script>
 </head>
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<textarea type="hidden" id="hiddenHave" name="youHaveA" value=""></textarea>
+<!-- <textarea type="hidden" id="hiddenHave" name="youHaveA" value=""></textarea> -->
 	
 <table>
 <!-- <tr>
