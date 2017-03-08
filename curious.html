@@ -45,7 +45,7 @@ textarea::-webkit-input-placeholder {
 }
 </style>
 <script language="JavaScript">
-<!--
+
 var r_text = new Array ();
 r_text[0] = "an organ";
 r_text[1] = "a heavy biscuit";
@@ -73,9 +73,7 @@ var i = Math.floor(22*Math.random())
 var object = r_text[i];
 var youHave = "You have in your hands " + r_text[i] + ".";
 // document.forms[0].youHaveA.value = object;
-//-->
 document.getElementById("hiddenHave").value = youHave.toString();
-// 	
 document.write(youHave);
 
 </script>
@@ -83,7 +81,7 @@ document.write(youHave);
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input id="hiddenHave" name="youHaveA" value=""/>
+<textarea type="hidden" id="hiddenHave" name="youHaveA" value=""></textarea>
 	
 <table>
 <!-- <tr>
