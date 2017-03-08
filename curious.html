@@ -74,7 +74,7 @@ var object = r_text[i];
 var youHave = "You have in your hands " + object + ".";
 // document.forms[0].youHaveA.value = object;
 //-->
-  window.onload = document.getElementById("hiddenHave").value = youHave;
+window.onload = document.getElementById("hiddenHave").value = youHave;
 // 	.toString();
 document.write(youHave);
 
@@ -83,7 +83,7 @@ document.write(youHave);
 <body>
 <form action="http://formspree.io/rlin@risd.edu" method="POST">
   <!-- <form action="mailto:rlin@risd.edu" method="post" enctype="text/plain"> -->
-<input type="hidden" id="hiddenHave" name="youHaveA" value=""/>
+<input id="hiddenHave" name="youHaveA" value=""/>
 	
 <table>
 <!-- <tr>
