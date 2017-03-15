@@ -1,0 +1,144 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script> -->
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,700" rel="stylesheet">
+  <style>
+
+body {
+  color: white;
+  background-color: #111;
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+  /*font-size: .8em;*/
+  font-size: 9pt;
+  margin-top: 40pt;
+  text-align: center;
+}
+
+table {
+  /*border-spacing: 0.5rem;*/
+  /*border-collapse: collapse;*/
+  font-size: 8pt;
+  margin-left: auto;
+  margin-right: auto;
+  /*text-align: center;*/
+  background-color: #fff;
+  border-color: blue;
+  border-style: dotted;
+  color: blue;
+
+}
+
+td, th {
+  border: 1px solid #eed;
+  padding: 0.2rem;
+  text-align: left;
+  border-color: blue;
+  border-style: dotted;
+}
+
+tr:hover {
+  background-color: #111111;
+  color: white;
+}
+
+td:hover::after,
+th:hover::after {
+  position: absolute;
+  background-color: blue;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+  font-weight: 700;
+}
+
+  #sep {
+    background-color: #aaaaff;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+select {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 300;
+  color: blue;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+is an island is a person is a paragraph, then what is an ocean?
+<!-- must grammatically work, and might need to be the same part of speech<br> -->
+<br><br><br>
+<table>
+  <tr>
+    <th>island</th>
+    <td title="a body">person</td>
+    <td>paragraph</td>
+  </tr>
+  <tr>
+    <th>ocean</th>
+    <td>the space between people</td>
+    <td>white space</td>
+  </tr>
+  <tr>
+    <th title="they sprout up + are celebrated/natural">trees</th>
+    <td>hair</td>
+    <td><select>
+  <option value="punctuation">punctuation</option>
+  <option value="saab">letters with ascenders</option>
+  <option value="mercedes">letters</option>
+  <option value="audi">the dots of i's</option>
+</select></td>
+  </tr>
+  <tr>
+    <th>dug-up holes</th>
+    <td>blemishes</td>
+    <td>loose library</td>
+  </tr>
+  <tr>
+  <th id="sep" colspan="4" >AREAS</th>
+  </tr>
+  <tr>
+    <th>continent</th>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>country</th>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>city</th>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>neighborhood</th>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>house</th>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>room</th>
+    <td>-</td>
+  </tr>
+</table>
+
+</body>
+</html>
