@@ -4,14 +4,16 @@
   <style>
 
 body {
-  color: white;
-  background-color: #111;
+  background-color: brown;
   font-family: 'Overpass Mono', monospace;
   font-weight: 300;
-  /*font-size: .8em;*/
   font-size: 9pt;
   margin-top: 40pt;
   text-align: center;
+}
+
+.intro {
+  color: white;
 }
 
 table {
@@ -20,31 +22,29 @@ table {
   font-size: 8pt;
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
   background-color: #fff;
-  border-color: blue;
+  border-color: brown;
   border-style: dotted;
-  color: blue;
-
+  color: brown;
 }
 
 td, th {
   border: 1px solid #eed;
   padding: 0.2rem;
   text-align: left;
-  border-color: blue;
+  border-color: brown;
   border-style: dotted;
 }
 
 tr:hover {
-  background-color: #111111;
+  background-color: brown;
   color: white;
 }
 
 td:hover::after,
 th:hover::after {
   position: absolute;
-  background-color: blue;
+  background-color: brown;
   left: 0;
   top: -5000px;
   height: 10000px;
@@ -54,24 +54,26 @@ th:hover::after {
 }
 
   #sep {
-    background-color: #aaaaff;
-    color: blue;
+    background-color: brown;
+    color: white;
     text-align: center;
     letter-spacing: 1px;
+    opacity: .9;
   }
 
 select {
   font-family: 'Overpass Mono', monospace;
   font-weight: 300;
-  color: blue;
+  color: brown;
 }
+
 }
 
 </style>
 </head>
 
 <body>
-if an island is a person is a paragraph, then what is an ocean?
+<div class="intro">if an island is a person is a paragraph, then what is an ocean?</div>
 <!-- must grammatically work, and might need to be the same part of speech<br> -->
 <br><br><br>
 <table>
@@ -79,6 +81,7 @@ if an island is a person is a paragraph, then what is an ocean?
     <th>island</th>
     <td title="a body">person</td>
     <td>paragraph</td>
+    <td>house</td>
   </tr>
   <tr>
     <th>ocean</th>
@@ -88,10 +91,10 @@ if an island is a person is a paragraph, then what is an ocean?
     <td>-</td>
     <td><select>
   <option value="punctuation">punctuation</option>
-  <option value="saab">letters with ascenders</option>
-  <option value="mercedes">letters</option>
-  <option value="audi">the dots of i's</option>
-  <option value="audi">spaces</option>
+  <option value="ascenders">letters with ascenders</option>
+  <option value="letters">letters</option>
+  <option value="dots">the dots of i's</option>
+  <option value="spaces">spaces</option>
 </select></td>
   </tr>
   <tr>
@@ -126,7 +129,7 @@ if an island is a person is a paragraph, then what is an ocean?
     <td>loose library</td>
   </tr>
   <tr>
-  <th id="sep" colspan="4" >AREAS</th>
+  <th id="sep" colspan="4">AREAS</th>
   </tr>
   <tr>
     <th>continent</th>
@@ -143,14 +146,6 @@ if an island is a person is a paragraph, then what is an ocean?
   </tr>
   <tr>
     <th>neighborhood</th>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>house</th>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>room</th>
     <td>-</td>
   </tr>
 </table>
