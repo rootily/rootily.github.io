@@ -34,10 +34,14 @@ th {
 td, tr {
     color: white;
     border: 1px dotted brown;
+  border-color: brown;
+  border-style: dotted;
 }
     
 td, th {
   border: 1px dotted brown;
+  border-color: brown;
+  border-style: dotted;
   padding: 0.2rem;
   text-align: left;
   border-color: white;
@@ -46,13 +50,18 @@ td, th {
 
 td:hover, tr:hover, th:hover {
   border: 1px dotted brown;
+  border-color: brown;
+  border-style: dotted;
 /*   background-color: brown; */
   color: brown;
 }
     
 td:hover::after,
-tr:hover::after {
+tr:hover::after,
+th:hover::after {
   border: 1px dotted brown;
+  border-color: brown;
+  border-style: dotted;
   position: absolute;
 /*   background-color: brown; */
   left: 0;
