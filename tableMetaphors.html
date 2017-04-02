@@ -37,22 +37,22 @@ td, tr {
 }
     
 td, th {
-  border: 1px solid brown;
+  border: 1px dotted brown;
   padding: 0.2rem;
   text-align: left;
   border-color: white;
   border-style: dotted;
 }
 
-td:hover {
-  border: 1px solid brown;
+td:hover, tr:hover {
+  border: 1px dotted brown;
 /*   background-color: brown; */
   color: brown;
 }
     
 td:hover::after,
 tr:hover::after {
-  border: 3px solid brown;
+  border: 1px dotted brown;
   position: absolute;
 /*   background-color: brown; */
   left: 0;
