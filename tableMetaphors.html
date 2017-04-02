@@ -43,13 +43,13 @@ td, th {
   border-style: dotted;
 }
 
-tr:hover, th:hover {
+tr:hover td:hover{
   background-color: brown;
   color: white;
 }
     
 td:hover::after,
-th:hover::after {
+tr:hover::after {
   position: absolute;
   background-color: brown;
   left: 0;
@@ -83,11 +83,6 @@ select {
   color: white;
   opacity: .3;
  }
-        
-.question {
-  color: white;
-  opacity: .3;
-}
     
 .question:hover {
   color: white;
