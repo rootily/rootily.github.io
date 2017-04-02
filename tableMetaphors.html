@@ -22,8 +22,8 @@ table {
   font-size: 8pt;
   margin-left: auto;
   margin-right: auto;
-  background-color: brown;
-  border-color: brown;
+  background-color: white;
+  border-color: white;
   border-style: dotted;
   color: brown;
 }
@@ -37,26 +37,26 @@ td, th {
 }
     
 th {
-    color: white;
+    color: brown;
 }
 
 tr:hover, th:hover {
-  background-color: white;
-  color: brown;
+  background-color: brown;
+  color: white;
 }
     
 
 td:hover::after,
 th:hover::after {
   position: absolute;
-  background-color: white;
+  background-color: brown;
   left: 0;
   top: -5000px;
   height: 10000px;
   width: 100%;
   z-index: -1;
   font-weight: 700;
-  color: brown;
+  color: white;
 }
 
   #sep {
@@ -75,11 +75,17 @@ select {
 
 .questions {
   font-size: 8pt;
-  color: white;
+  color: gray;
+  opacity: .2;
   width: 60%;
   text-align: left;
   margin-left: 21%;
  }
+    
+.question:hover {
+  color: white;
+  opacity: 1;
+}
 
 }
 
@@ -192,24 +198,24 @@ select {
 </table>
 <br><br>
 <!--   metaphorical things are spatial, must be spatial. there is no time concept here. we are sticking to 2d thoughts. there is no short, there is only small. there is no sadness, there is only slowness.-->
-  <div class="questions">what is a <b>rock</b>? a natural thing that sprinkles the surface, sometimes large |a divider|, and sometimes small |stepped on|.<br>
-    what is an <b>island</b>? a lonely thing surrounded by a large, vaster thing. sometimes it is clustered with other lonely things like itself.<br>
-  what is a <b>building</b>? an often tall thing with levels that was built by moving things to contain moving things.<br>
-  what is a <b>river</b>? a long contained, changing thing that winds around other things unlike it. moving things like this thing.<br>
-  what is a <b>person</b>? a moving thing that likes to move other things very much.<br>
-  what is an <b>animal</b>? a moving thing that consumes smaller things.<br>
-  what is a <b>plant</b>? a slowly changing thing.<br>
-  what is a <b>hole</b>? a thing that something is missing.<br>
-  what is a <b>country</b>? a large, invisible thing with edges, delineated by moving things.<br>
-  what is a <b>street</b>? moving things follow this long, splitting thing that makes them a little faster.<br>
-  what is a <b>feeling</b>? a complex, invisible thing attached to moving things that affects their speed.<br>
-  what is a <b>sun</b>? a thing that makes other things pretty and visible.<br>
-  what is a <b>day</b>? an invisible thing made for counting the movements of moving things.<br>
-  what is a <b>year</b>? a large invisible thing containing a series of invisible things made for counting the movements of moving things.<br>
-  what is a <b>question</b>? an invisible thing moving things excrete when confused.<br>
-  what is a <b>job</b>? an invisible thing that makes moving things move.<br>
-  what is a <b>life</b>? a whole lot of things stacked atop one another.<br>
-  what is a <b>universe</b>? a large variety of things packed tightly inside and around and next to each other.
+  <div class="questions"><span class="question">what is a <b>rock</b>? a natural thing that sprinkles the surface, sometimes large |a divider|, and sometimes small |stepped on|.</span><br>
+  <span class="question">what is an <b>island</b>? a lonely thing surrounded by a large, vaster thing. sometimes it is clustered with other lonely things like itself.</span><br>
+  <span class="question">what is a <b>building</b>? an often tall thing with levels that was built by moving things to contain moving things.</span><br>
+  <span class="question">what is a <b>river</b>? a long contained, changing thing that winds around other things unlike it. moving things like this thing.</span><br>
+  <span class="question">what is a <b>person</b>? a moving thing that likes to move other things very much.</span><br>
+  <span class="question">what is an <b>animal</b>? a moving thing that consumes smaller things.</span><br>
+  <span class="question">what is a <b>plant</b>? a slowly changing thing.</span><br>
+  <span class="question">what is a <b>hole</b>? a thing that something is missing.</span><br>
+  <span class="question">what is a <b>country</b>? a large, invisible thing with edges, delineated by moving things.</span><br>
+  <span class="question">what is a <b>street</b>? moving things follow this long, splitting thing that makes them a little faster.</span><br>
+  <span class="question">what is a <b>feeling</b>? a complex, invisible thing attached to moving things that affects their speed.</span><br>
+  <span class="question">what is a <b>sun</b>? a thing that makes other things pretty and visible.</span><br>
+  <span class="question">what is a <b>day</b>? an invisible thing made for counting the movements of moving things.</span><br>
+  <span class="question">what is a <b>year</b>? a large invisible thing containing a series of invisible things made for counting the movements of moving things.</span><br>
+  <span class="question">what is a <b>question</b>? an invisible thing moving things excrete when confused.</span><br>
+  <span class="question">what is a <b>job</b>? an invisible thing that makes moving things move.</span><br>
+  <span class="question">what is a <b>life</b>? a whole lot of things stacked atop one another.</span><br>
+  <span class="question">what is a <b>universe</b>? a large variety of things packed tightly inside and around and next to each other.</span>
 <br><br>
 note: metaphors work because they are made with context (like <select>
 <option value="ascenders">controlled experiments</option>
