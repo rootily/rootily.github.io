@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>8eyes type foundry</title>
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Muli" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+body {
+  font-family: 'Muli', Verdana, serif;
+  font-style: light;
+  font-size: 7pt;
+  letter-spacing: 2px;
+  margin-left: 0;
+  /*margin-right: auto;*/
+  width: 100%;
+  /*text-align: center;*/
+  margin-top: 2em;
+  margin-bottom: 0;
+  color: white;
+  background-color: black;
+
+}
+
+h1 {
+  font-family: 'Muli', Verdana, serif;
+  font-style: light;
+  font-size: 7pt;
+  /*align-items: center;*/
+  margin-top: 2em;
+  letter-spacing: 2px;
+}
+
+#testarea {
+  margin-left: 2em;
+}
+
+@font-face {
+    font-family: 'Animal';
+    src: url('Animal.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'alphaDraft13';
+    src: url('alphaDraft13.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Fin-Wide-Taller';
+    src: url('FinWide.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Palm Linear';
+    src: url('Palm Linear Norm Width Taller-1.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'palm linear thin';
+    src: url('palm linear narrow thin 2-1.otf') format('opentype');
+}
+
+/*p.customfont {
+    font-family: "alphaDraft9", Verdana, serif;
+}*/
+
+textarea {
+  border: none;
+  font-size: 60pt;
+  background-color: black;
+  color: white;
+  width: 96%;
+  /*text-align: center;*/
+}
+
+.fin {
+  font-size: 60pt;
+  font-family: 'Fin-Wide-Taller', serif;
+}
+
+.alpha {
+  font-size: 60pt;
+  font-family: 'alphaDraft13', serif;
+}
+
+.callig {
+  font-size: 60pt;
+  font-family: 'Animal', Verdana, serif;
+}
+
+.palm {
+  font-size: 60pt;
+  font-family: 'Palm Linear', Verdana, serif;
+}
+
+.palmtwo {
+  font-size: 60pt;
+  font-family: 'palm linear thin', Verdana, serif;
+}
+
+textarea:focus {
+  /*border: none;*/
+  outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #cce;
+    text-shadow: none;
+    -webkit-text-fill-color: initial;
+}
+
+.emoticon {
+  float: right;
+  margin-right: 6em;
+  position: relative;
+  top: 2em;
+}
+
+.blurb {
+  line-height: 14pt;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 3em;
+  background-color: white;
+  color: black;
+}
+
+#white-icon {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  display: none;
+}
+
+.dark-icon {
+  position: fixed;
+  bottom: 0px;
+ right: 20px;
+}
+
+.dark-icon:hover img{
+  -webkit-transition: all .3s ease-out;
+     -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+          transition: all .4s ease;
+  -webkit-transform: rotatex(180deg);
+     -moz-transform: rotatey(180deg);
+      -ms-transform: rotatex(180deg);
+          transform: rotatey(180deg);
+          /*transform: rotatez(360deg);*/
+}
+
+.dark-icon.animated {
+  /*-webkit-transition: all 1.3s ease;
+     -moz-transition: all 1.3s ease;
+      -ms-transition: all 1.3s ease;
+          transition: all 1.3s ease;
+  -webkit-transform: rotatey(180deg);
+     -moz-transform: rotatey(180deg);
+      -ms-transform: rotatey(180deg);
+          transform: rotatey(180deg);*/
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- <div id="white-icon"><img src="8eyesw.png" width="120px"></div><br> -->
+<div id="testarea">
+<p class="emoticon">::::)</p>
+<br><br><br><br><br>
+ANIMAL<br>
+    <textarea id="txtInput" class="callig">welcome to our</textarea>
+    <br>
+    ALPHA<br>
+    <textarea cols="20" id="txtInput" class="alpha">TESTING</textarea>
+    <br>
+    FIN<br>
+    <textarea cols="29" id="txtInput" class="fin">site, where you can</textarea>
+    <br>
+    PALM LINEAR <br>
+    <textarea cols="36" id="txtInput" class="palm">try one font</textarea>
+    <br>
+    PALM LINEAR THIN<br>
+    <textarea cols="36" id="txtInput" class="palmtwo">or four.</textarea><br>
+    <br><br><br>
+  </div>
+    <div class="dark-icon">
+      <!-- <img src="8eyes.png" width="120px"> -->
+      <img src="8eyes.png" width="120px" onclick="this.src='8eyesw.png';">
+    </div>
+    <div class="blurb">
+    ::::) type foundry was born on a sunny day in april.
+    <br>it is run by 4 asian american female designers—
+    <br>kaitlyn, may, ruth, and taryn—who together have 
+    <br>a dream of making typefaces forever (in their free time).</div>
+
+    <!-- <script>
+    $(document).ready(function() {
+    $('dark-icon').hover(
+      function () {
+        $(this).addClass('animated');
+      },
+      function () {
+        $(this).removeClass('animated');
+      }
+    );
+    }
+    </script> -->
+</body>
+</html>
