@@ -1,26 +1,20 @@
 <html>
 <head>
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( document ).tooltip();
-  } );
-  </script> -->
   <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,700" rel="stylesheet">
   <style>
 
 body {
-  color: white;
-  background-color: #111;
+  background-color: brown;
   font-family: 'Overpass Mono', monospace;
   font-weight: 300;
-  /*font-size: .8em;*/
   font-size: 9pt;
   margin-top: 40pt;
   text-align: center;
+  cursor: crosshair;
+}
+
+.intro {
+  color: white;
 }
 
 table {
@@ -29,154 +23,221 @@ table {
   font-size: 8pt;
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
-  background-color: #fff;
-  border-color: blue;
+  background-color: white;
+  border-color: brown;
   border-style: dotted;
-  color: blue;
-
 }
 
-td, th {
-  border: 1px solid #eed;
+th {
+    color: brown;
+  border: 1px dotted brown;
   padding: 0.2rem;
   text-align: left;
-  border-color: blue;
+}
+
+td {
+    color: white;
+    border: 1px dotted brown;
+/*   border-color: brown;
+  border-style: dotted; */
+  padding: 0.2rem;
+  text-align: left;
+}
+
+tr {
+  border: 1px dotted brown;
+/*   border-color: brown;
+  border-style: dotted; */
+}
+
+tr:hover, th:hover, td:hover {
+  border: 1px dotted brown;
+  border-color: brown;
   border-style: dotted;
+/*   background-color: brown; */
+  color: brown;
 }
 
-tr:hover {
-  background-color: #111111;
-  color: white;
-}
-
-td:hover::after,
+tr:hover::after,
 th:hover::after {
+  border: 1px dotted brown;
+  border-color: brown;
+  border-style: dotted;
   position: absolute;
-  background-color: blue;
+/*   background-color: brown; */
   left: 0;
   top: -5000px;
   height: 10000px;
   width: 100%;
   z-index: -1;
   font-weight: 700;
+  color: brown;
 }
 
   #sep {
-    background-color: #aaaaff;
-    color: white;
+    background-color: white;
+    color: brown;
     text-align: center;
     letter-spacing: 1px;
+    opacity: .9;
   }
 
 select {
   font-family: 'Overpass Mono', monospace;
   font-weight: 300;
-  color: blue;
+  color: brown;
 }
+
+.questions {
+  font-size: 8pt;
+  width: 60%;
+  text-align: left;
+  margin-left: 21%;
+  color: white;
+ }
+
+.question {
+  opacity: .3;
+}
+
+.question:hover {
+  color: white;
+  opacity: 1;
+}
+
 }
 
 </style>
 </head>
 
 <body>
-
-<<<<<<< HEAD
-if an island is a person is a paragraph, then what is an ocean?
-=======
-is an island is a person is a paragraph, then what is an ocean?
->>>>>>> origin/master
+<div class="intro">if an island is a person is a paragraph, then what is an ocean?</div>
 <!-- must grammatically work, and might need to be the same part of speech<br> -->
 <br><br><br>
 <table>
   <tr>
     <th>island</th>
-    <td title="a body">person</td>
-    <td>paragraph</td>
+    <th title="a body">person</th>
+    <th>paragraph</th>
+    <th>house</th>
+    <th>universe</th>
   </tr>
   <tr>
     <th>ocean</th>
     <td>the space between people</td>
-<<<<<<< HEAD
-    <td>page</td>
-  </tr>
+    <td title="white space">the page</td>
+    <td>the ground</td>
+    <td><select>
+  <option value="theories">theories</option>
+  <option value="unobservable">the unobservable universe</option>
+</select></td>
   <tr>
     <th>rocks</th>
-    <td>the space between people</td>
+    <td>dead skin</td>
     <td><select>
   <option value="punctuation">punctuation</option>
-  <option value="saab">letters with ascenders</option>
-  <option value="mercedes">letters</option>
-  <option value="audi">the dots of i's</option>
-  <option value="audi">spaces</option>
+  <option value="o">o's</option>
 </select></td>
+<td>papers</td>
+<td>planets</td>
   </tr>
   <tr>
-    <th>cities</th>
-    <td>the space between people</td>
-    <td>words</td>
-  </tr>
-  <tr>
-    <th>buildings/people</th>
-    <td>the space between people</td>
+    <th>buildings</th>
+    <td>-</td>
     <td>characters</td>
+    <td>things in piles</td>
+    <td>stars</td>
+  </tr>
+  <tr>
+    <th>people</th>
+    <td>bacteria</td>
+    <td>strokes</td>
+    <td>critters</td>
+    <td>meteorites</td>
   </tr>
   <tr>
     <th>streets</th>
-    <td>the space between people</td>
+    <td>wrinkles</td>
     <td title="typography terminology: running vertical spaces between words">rivers</td>
-=======
-    <td>white space</td>
->>>>>>> origin/master
+    <td>hallways</td>
+    <td>gravitational fields</td>
   </tr>
   <tr>
     <th title="they sprout up + are celebrated/natural">trees</th>
     <td>hair</td>
     <td><select>
-  <option value="punctuation">punctuation</option>
-  <option value="saab">letters with ascenders</option>
-  <option value="mercedes">letters</option>
-  <option value="audi">the dots of i's</option>
-<<<<<<< HEAD
-  <option value="audi">spaces</option>
-=======
->>>>>>> origin/master
-</select></td>
+  <option value="ascenders">letters with ascenders</option>
+  <option value="letters">punctuation</option>
+  <option value="spaces">spaces</option></select></td>
+  <td>-</td>
+  <td>-</td>
   </tr>
   <tr>
-    <th>dug-up holes</th>
-    <td>blemishes</td>
-    <td>loose library</td>
+    <th>holes</th>
+    <td>pores</td>
+    <td>spaces</td>
+    <td><select>
+  <option value="closets">closets</option>
+  <option value="cupboards">cupboards</option>
+  <option value="drawers">drawers</option></select></td>
+    <td>black holes</td>
   </tr>
   <tr>
-  <th id="sep" colspan="4" >AREAS</th>
+  <th id="sep" colspan="5">AREAS</th>
   </tr>
   <tr>
     <th>continent</th>
     <td>-</td>
-    <td>-</td>
+    <td>book</td>
+    <td>house and house across the street</td>
+    <td>local galaxy group</td>
   </tr>
   <tr>
     <th>country</th>
-    <td>-</td>
+    <td>limbs</td>
+    <td>chapters</td>
+    <td>rooms</td>
+    <td>galaxy</td>
   </tr>
   <tr>
     <th>city</th>
     <td>-</td>
+    <td>sentences</td>
+    <td>piles</td>
+    <td>local star group</td>
   </tr>
   <tr>
     <th>neighborhood</th>
     <td>-</td>
-  </tr>
-  <tr>
-    <th>house</th>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>room</th>
+    <td>words</td>
+    <td>a solar system</td>
     <td>-</td>
   </tr>
 </table>
-
+<br><br>
+<!--   metaphorical things are spatial, must be spatial. there is no time concept here. we are sticking to 2d thoughts. there is no short, there is only small. there is no sadness, there is only slowness.-->
+  <div class="questions"><span class="question">what is a <b>rock</b>? a natural thing that sprinkles the surface, sometimes large |a divider|, and sometimes small |stepped on|.</span><br>
+  <span class="question">what is an <b>island</b>? a lonely thing surrounded by a large, vaster thing. sometimes it is clustered with other lonely things like itself.</span><br>
+  <span class="question">what is a <b>building</b>? an often tall thing with levels that was built by moving things to contain moving things.</span><br>
+  <span class="question">what is a <b>river</b>? a long contained, changing thing that winds around other things unlike it. moving things like this thing.</span><br>
+  <span class="question">what is a <b>person</b>? a moving thing that likes to move other things very much.</span><br>
+  <span class="question">what is an <b>animal</b>? a moving thing that consumes smaller things.</span><br>
+  <span class="question">what is a <b>plant</b>? a slowly changing thing.</span><br>
+  <span class="question">what is a <b>hole</b>? a thing that something is missing.</span><br>
+  <span class="question">what is a <b>country</b>? a large, invisible thing with edges, delineated by moving things.</span><br>
+  <span class="question">what is a <b>street</b>? moving things follow this long, splitting thing that makes them a little faster.</span><br>
+  <span class="question">what is a <b>feeling</b>? a complex, invisible thing attached to moving things that affects their speed.</span><br>
+  <span class="question">what is a <b>sun</b>? a thing that makes other things pretty and visible.</span><br>
+  <span class="question">what is a <b>day</b>? an invisible thing made for counting the movements of moving things.</span><br>
+  <span class="question">what is a <b>year</b>? a large invisible thing containing a series of invisible things made for counting the movements of moving things.</span><br>
+  <span class="question">what is a <b>question</b>? an invisible thing moving things excrete when confused.</span><br>
+  <span class="question">what is a <b>job</b>? an invisible thing that makes moving things move.</span><br>
+  <span class="question">what is a <b>life</b>? a whole lot of things stacked atop one another.</span><br>
+  <span class="question">what is a <b>universe</b>? a large variety of things packed tightly inside and around and next to each other.</span>
+<br><br>
+<span class="question">note: metaphors work because they are made with context (like <select>
+<option value="ascenders">controlled experiments</option>
+<option value="letters">simulated environments</option></select>?), they make sense in contained examples, but may break down when extended.</span>
+<br><br><br></div>
 </body>
 </html>
