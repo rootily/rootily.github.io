@@ -1,0 +1,530 @@
+<html>
+<head>
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  float: right;
+}
+
+.draggable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.hlines {
+  width: 100%;
+  border-bottom: 1px rgba(130,220,255,.3) solid;
+  /*border-bottom: 1px rgba(255,180,230,.3) solid;*/
+  height: 11px;
+  display: inline-block;
+  filter: blur(.5px);
+}
+
+.vlines {
+  height: 100%;
+  width: 11px;
+  float: left;
+  border-right: 1px rgba(130,220,255,.3) solid;
+  /*border-right: 1px rgba(255,180,230,.3) solid;*/
+  filter: blur(.5px);
+}
+
+.hcontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.vcontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+img:hover {
+  /*filter: blur(0px);*/
+  opacity: .9;
+  mix-blend-mode: none;
+  transition: .02s;
+  filter: none;
+}
+
+img {
+  display: block;
+  /*max-width: 100%;*/
+  /*height: auto;*/
+  opacity: .05;
+  position: absolute;
+  /*top: 0;
+  left: 0;*/
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  mix-blend-mode: darken;
+  /*filter: blur(.5px);*/
+  transition-timing-function: ease-in;
+  transition: 10s;
+}
+
+/*#ruth3 {
+  background-image: url("ruthmem_3.png");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid red 1px;
+  width: 800px;
+  height: 1040px;
+  position: absolute;
+}*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    z-index: 60;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+label {
+    display: inline-block;
+    width: 5em;
+  }
+
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src="https://npmcdn.com/draggabilly@2.1/dist/draggabilly.pkgd.min.js"></script>
+
+ <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+ <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+<title>memory palimpsest</title>
+      <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+      <script src="jQuery.js"></script>
+      <script src="jquery-ui.min.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+		// projects coming in smooth
+			$(".work").addClass("fade-nice");
+
+		// scroll-top button for mobile,
+		// and x animation
+		$(document).scroll(function(){
+			// div class haha
+			$(".ex").addClass("flippy");
+
+			var scrollTop = $(document).scrollTop();
+			//var work = $(".work").offset().top - 30;
+			var work = 15;
+			//use css media query to check
+			var width = $('.mobile-info').is(':visible');
+			// if the scroll position is below the beginning of the work and we're on mobile
+			if ((scrollTop > work) && (width == true)) {
+				$(".top").fadeIn(400);
+				console.log('Hi');
+			} else {
+				$(".top").fadeOut(200);
+				console.log('Nope');
+			}
+		});
+
+		$(".top").click(function(){
+			$("html, body").animate({ scrollTop: "0px" });
+		});
+
+		//draggable stuff
+		var $draggable = $('.draggable').draggabilly();
+
+		//make dragged thing, clicked thing on top
+		var zcount = 40; //set z-index
+		$draggable.on( 'dragStart', function(){
+			$(this).css("z-index", zcount);
+			zcount = zcount + 1; //increment z-index so dragged thing is always on top
+		});
+
+		$(".draggable").click(function(){
+			$(this).css("z-index", zcount);
+			zcount = zcount + 1; //increment z-index so dragged thing is always on top
+		});
+
+		// // close button for post-its
+		// $(".ex").click(function(){
+		// 	$(this).parent().fadeOut(200);
+		// });
+		// //close (a post-it) onclick
+		// $(".close-on-click").click(function(){
+		// 	$(this).fadeOut(200);
+		// });
+
+		// // modal on click of pofo images
+		// $("article").click(function(){
+		// 	//selected caption
+		// 	var caption = $("." + $(this).attr("alt"));
+		// 	//both caption, screen, and ex button fade in
+		// 	$(".screen").fadeIn(400);
+		// 	caption.fadeIn(400);
+		// 	$(".modal-ex").fadeIn(400);
+		// 	$('body').addClass("no-scroll");
+		// });
+    //
+		// //click modal ex to get out of caption
+		// $(".modal-ex").click(function(){
+		// 	$('body').removeClass("no-scroll");
+		// 	$(".caption").fadeOut(200);
+		// 	$(this).fadeOut(200);
+		// 	$(".screen").fadeOut(400);
+		// });
+		// // or click screen to get out of caption
+		// $(".screen").click(function(){
+		// 	$('body').removeClass("no-scroll");
+		// 	$(".modal-ex").fadeOut(200);
+		// 	$(".caption").fadeOut(200);
+		// 	$(this).fadeOut(400);
+		// });
+    //
+		// //info back
+		// $(".more-info").click(function(){
+		// 	$(".screen").fadeIn(400);
+		// 	$(".info-back").fadeIn(400);
+		// 	$(".modal-ex").fadeIn(400);
+		// 	$('body').addClass("no-scroll");
+		// });
+
+    $( function() {
+    $( document ).tooltip();
+  } );
+
+	});
+
+</script>
+</head>
+
+<body>
+
+<img src="ruthMemorynogrid.png" class="draggable" width="800px">
+<img src="ruthmem_2.png" class="draggable" width="800px">
+<img src="ruthmem_3sm.jpg" class="draggable" width="800px">
+<img src="ruthmem_4.png" class="draggable" width="600px">
+<img src="ruthmem_5sm.png" class="draggable" width="600px">
+
+<img src="boongMemorysm.jpg" class="draggable" width="800px">
+<img src="boongmem_2sm.png" class="draggable" width="800px">
+<img src="boongmem_3.png" class="draggable" height="500px">
+<img src="boongmem_4sm.png" class="draggable" height="600px">
+<img src="boongmem_5sm.png" class="draggable" width="800px">
+
+<!-- <div id="ruth3" class="draggable"> </div> -->
+
+<div class="hcontainer">
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+<span><div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div>
+<div class="hlines"></div></span>
+</div>
+
+<div class="vcontainer">
+  <span>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+  <div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span><span>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+<div class="vlines"></div>
+</span></div>
+
+
+</body>
+</html>
