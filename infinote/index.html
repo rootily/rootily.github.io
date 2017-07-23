@@ -1,0 +1,137 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A new way to digitally annotate.">
+    <meta name="keywords" content="notes">
+    <meta name="author" content="Ruth Lin">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <title>infinote</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jquery.minicolors.css">
+    <script src="script.js"></script>
+    <script src="jquery-1.12.3.min.js"></script>
+    <script src="smooth-scroll.min.js"></script>
+    <script type="text/javascript" src="jquery.minicolors.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Halant|Vollkorn|Inconsolata|Cousine|Palanquin' rel='stylesheet' type='text/css'>
+    <script src="https://use.typekit.net/iym1mbv.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 800);
+        return false;
+      }
+    }
+  });
+});
+</script>
+  </head>
+
+  <body>
+    <div class="sign-up" onclick="signUp()">
+      sign-up
+    </div>
+
+    <div class="overlay" ondblclick="exitSignUp()">
+      <div class=overlayBG></div>
+      <img id="loginPic" class="" src="images/InfinoteLogin.png"></img>
+      <div class="loginScreen">
+        <div class="loginFrame">
+          <div class="login-swatch"></div>
+          <div class="login-button">Start annotating.</div>
+          <form>
+            <input type="text" name="user"><br>
+            <input type="text" name="email" value=""><br>
+            <input type="password" name="password"><br>
+          </form>
+
+          <div class="form-group">
+              <div style="background-color: rgb(219, 145, 61);" class="login-swatch2 minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left minicolors-focus">
+                <input type="hidden" id="hidden-input" class="login-swatch2 demo minicolors-input" value="white" size="7">
+                <span class="login-swatch2 minicolors-swatch minicolors-sprite minicolors-input-swatch" style="opacity: 0;">
+                  <span onclick="makePicker()" class="login-swatch2 minicolors-swatch-color" style="opacity: 1; background-color: rgb(206, 206, 210);">
+                  </span>
+                </span>
+              </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <section class="header">
+      <!-- <div class="top-img"> -->
+        <!-- <div class="borderNone"> </div> -->
+        <!-- <img class="top-img"  width="75%" alt=" "> -->
+        <div class="top-img"></div>
+
+        <!-- </div> -->
+      <!-- </div> -->
+      <div class="title">
+        <h1>infinote</h1>
+        <!-- <p class="descrip">a new way to annotate digitally</p><br> -->
+        <p class="descrip">a new way to annotate digitally.</p><br>
+        <!-- <p class="descrip">"To infinity, and beyond!"</p><br> -->
+        <p class="learn"><a href="#introScroll">what is this?</a></p>
+      </div>
+    </section>
+    <section class="flex-container">
+
+      <section class="intro" id="introScroll">
+        <!-- <h3><b>infinote</b> is an endless, boundless, vast, associative, annotation environment designed for endless annotation.</h3> -->
+        <h3>infinote is an interconnected annotation environment designed for tangential&nbspthinkers.</h3> <!--thinking?-->
+   <!-- infinote invites you to take notes, make reference, and follow tangential thoughts.  -->
+        <p class="introP">Inspired by marginalia and non-linear brainstorming, infinote acknowledges that thoughts naturally diverge, and that a bringing together of ideas (even extraneous ones) can be not only enlightening, but&nbspdelightful.
+          <br><br>The strength of infinote lies in three core&nbspideas:</p>
+          <p class="listP">interconnectivity.<br>a porous ecosystem.<br>infinite space.</p>
+      </section>
+
+      <section class="anatomy">
+        <p class="feature-descrip">See the anatomy of an infinote comment.</p>
+        <div class="anatomyPic" src="" alt=""></div>
+      </section>
+
+      <section class="nodeMap">
+        <p class="feature-descrip">Zoom out, and browse annotations by patterns of connections.</p>
+        <div class="nodeMapPic" src="" alt=""></div>
+      </section>
+
+      <section class="annotate">
+        <p class="feature-descrip">Make annotations on selected text, and build off those of others.</p>
+        <div class="annotatePic" src="" alt=""></div>
+        <!-- <img class="featurePics2" src="EditorialNotesPics14.png" alt="picture" width="1300px"></img>
+        <img class="featurePics3" src="EditorialNotesClose1.png" alt="picture" width="900px"></img> -->
+      </section>
+
+      <section class="highlight">
+        <p class="feature-descrip">Highlight separate words and paragraphs in one&nbspgo.</p>
+        <div class="highlightPic" src="" alt=""></div>
+      </section>
+
+      <section class="widget">
+        <p class="feature-descrip">Pull in text from outside sources cleanly using the infinote extension.</p>
+        <div class="widgetPic" src="" alt=""></div>
+      </section>
+
+      <section class="personal">
+        <p class="feature-descrip">See all your personal annotations in one place.</p>
+        <div class="personalPic" src="" alt=""></div>
+      </section>
+
+      <section class="colophon">
+          <p>infinote was inspired by the 1931 <i>Colophon</i> article,<br><a href="http://ed-ex.github.io/final/pdf/final-reading-colophon.pdf">"Four Centuries of Book Titles"</a>, and was created for<br>Editorial Design for Screen, RISD 2016</p>
+      </section>
+
+    </section>
+  </body>
+    <script>
+      smoothScroll.init();
+    </script>
+</html>

@@ -1,0 +1,832 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: calluna, serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.sign-up {
+  background-color: gold;
+  /*padding: 3px;*/
+  padding: 7px;
+  padding-left: 18px;
+  padding-top: 14px;
+  padding-bottom: 0px;
+  padding-right: 16px;
+  color: black;
+  font-family: cousine, palanquin;
+  font-size: .9em;
+  width: 65px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  /*padding-left: 5px;*/
+  right: 0px;
+  /*border-bottom: 7px gold solid;*/
+  text-align: left;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,215,0,.3);
+  /*background: rgba(255, 0, 255, .4);*/
+  background: rgba(255,255,255,.2);
+  /*filter: grayscale(1);*/
+  /*background: rgba(255, 255, 255, .8);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.overlay.appears {
+  opacity: 1;
+  z-index: 19;
+  transition: .5s ease;
+  transition-delay: .5s;
+}
+
+#loginPic {
+  opacity: 0;
+  z-index: 20;
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  transition: .2s;
+  border: 1px magenta solid;
+}
+
+#loginPic.appears {
+  opacity: 1;
+  z-index: 20;
+  /*transition: .2s;*/
+}
+
+.overlayBG {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: gold;
+  opacity:.3;
+  pointer-events: none;
+}
+
+.loginScreen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginFrame {
+  width: 600px;
+  z-index: 41;
+  height: 754px;
+  border: 1px solid gold;
+  margin: auto;
+  /*z-index: 40;*/
+}
+
+.login-swatch {
+  width: 71px;
+  height: 47px;
+  background-color: gold;
+  position: relative;
+  top: 151px;
+  z-index: 50;
+  pointer-events: none;
+  /*visibility: hidden;*/
+}
+
+.login-swatch2 {
+  position: fixed;
+  top: -264px;
+  left: 0px;
+  width: 71px !important;
+  height: 47px;
+}
+
+.minicolors-swatch {
+  width: 71px !important;
+  height: 47px !important;
+  opacity: 0;
+
+}
+
+.minicolors-swatch-color {
+  width: 71px !important;
+  height: 47px;
+  index: 51;
+}
+
+.login-button {
+  width: 138px;
+  height: 26px;
+  background-color: gold;
+  position: relative;
+  top: 626px;
+  left: 365px;
+  font-size: 1.1em;
+  padding: 10px;
+  padding-top: 12px;
+  padding-left: 18px;
+  padding-right: 4px;
+  font-family: calluna, serif;
+  transition: .5s;
+  border: 1px solid gold;
+}
+
+.login-button:hover {
+  transition: .3s;
+  cursor: pointer;
+  background-color: white;
+}
+
+form {
+  position: relative;
+  left: 100px;
+  top: 286px;
+}
+
+input {
+  border: none;
+  background-color: white;
+  height: 1.7em;
+  width: 420px;
+  font-family: calluna, serif;
+  font-size: 1.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: gold;
+  outline: none;
+  padding-left: 10px;
+  margin-bottom: 60px;
+}
+
+input:focus {
+  /*border: none;*/
+  /*border-bottom: gold solid 1px;*/
+  color: gold;
+  outline: none;
+}
+
+input[type=password] {
+  letter-spacing: 3px;
+}
+
+/*.sign-up:hover > #loginPic {
+ opacity: 1;
+ pointer-events: none;
+ transition: .2s ease;
+}*/
+
+.title {
+  /*border: red solid 3px;*/
+  position: absolute;
+  left: 47vw;
+  top: 50vh;
+  text-align: center;
+  width: 40vw;
+  height: 60vh;
+}
+
+*{
+  /*border: solid 1px red;*/
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: 400;
+  /*color: darkblue;*/
+  /*padding: 0;*/
+  margin: 0;
+}
+
+.descrip {
+  font-size: 1em;
+  position: relative;
+  /*top: -6vh;*/
+  font-weight: 400;
+  font-family: palanquin, halant;
+  color: black;
+  /*background-color: beige;*/
+  display: inline;
+  padding: .2em;
+  padding-left: .4em;
+  padding-right: .4em;
+  /*margin-top: 20px;*/
+  top: -10px;
+  letter-spacing: .8px;
+  line-height: 2em;
+}
+
+.learn {
+  display: inline-block;
+  padding: 1em;
+  padding-bottom: .9em;
+  /*padding-bottom: .4em;
+  padding-top: .55em;
+  padding-left: .5em;
+  padding-right: .5em;*/
+  font-family: cousine, monospace;
+  font-size: .9em;
+  border: gold 1px solid;
+  border-radius: 1px;
+  margin-top: 30px;
+  transition: .1s ease;
+}
+
+.learn:hover {
+  background-color: gold;
+  transition: .1s ease;
+}
+
+.top-img {
+  position: relative;
+  /*top: -10vh;*/
+  top: 2vh;
+  left: -.1vw;
+  z-index: -2;
+  opacity: 1;
+  /*background-image: url(images/infinoteWeb.png);*/
+  /*border: blue solid 2px;*/
+  /*border-style: none;*/
+  background: url(images/infinoteWeb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60vw;
+  height: 70vh;
+  background-size: 110vh;
+  /*display: flex; //apply to parent element, but not if it is absolute or floating. look up display flex css tricks*/
+}
+
+.top-img {
+  width: 50%;
+}
+
+hr {
+  border: gold 5px solid;
+}
+
+.borderNone {
+  border: 10px white solid;
+  position: absolute;
+  left: -.3vh;
+  top: 1.6vh;
+  width: 73.9vw;
+  height: 73.9vh;
+}
+
+.intro {
+  background-color: gold;
+  /*background: linear-gradient(to bottom left, white 20%, ivory);*/
+  position: relative;
+  margin-top: 20vh;
+  /*height: 100vh;*/
+  /*padding-top: 5vh;
+  padding-left: 33vh;
+  padding-right: 33vh;*/
+  text-align: center;
+  padding-bottom: 10vh;
+  order: 1;
+}
+
+h3 {
+  display: inline-block;
+  /*padding: 1em;*/
+  font-family: calluna, palanquin;
+  font-weight: 300;
+  text-align: left;
+  font-size: 2.5em;
+  width: 50vw;
+  max-width: 650px;
+  margin-top: 16vh;
+  color: black;
+
+}
+
+h3 > b {
+  font-style: normal;
+  font-weight: 400;
+  font-family: calluna;
+}
+
+.intro > p {
+  font-family: palanquin, Halant;
+  line-height: 1.6em;
+  text-align: left;
+  font-size: 1.4em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  max-width: 650px;
+  padding-top: 0;
+  letter-spacing: .3px;
+  /*margin-top: -5vh;*/
+}
+
+/*.intro > p > b {
+  font-family: calluna;
+  font-weight: normal;
+  font-size: 1.1em;
+}*/
+
+.intro > .listP {
+  text-align: right;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50vw;
+  margin-top: 2vh;
+  font-size: 1.6em;
+  padding-bottom: 6vh;
+}
+
+
+.flex-container {
+  display: flex;
+  /*flex-flow: row wrap;*/
+  flex-flow: column wrap;
+  justify-content: space-between;
+  /*align-items: center;*/
+  /*flex-basis: 50px;*/
+  align-content: center;
+
+}
+
+/*.flex-container *{
+  border: red solid 2px;
+}*/
+
+.anatomy {
+  order: 2;
+  display: flex;
+  /*flex-grow: 20%;
+  flex-shrink: 20%;
+  flex-basis: 40%;*/
+  /*flex: 1;*/
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.anatomyPic {
+  order: 2;
+  flex: 1.5;
+  background: url(images/commentAnatomy2.png);
+  background-repeat: no-repeat;
+  /*background-size: 50vh auto;*/
+  background-size: contain;
+  max-height: 140%;
+  background-position: center;
+  flex-grow: 50%;
+  height: 90vh;
+  margin-top: 6vh !important;
+}
+
+/*img {
+  max-width: 60%;
+}*/
+
+.anatomy p {
+  vertical-align: middle;
+  margin-left: 12vw;
+}
+
+.nodeMap {
+  order: 70;
+  display: flex;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.nodeMapPic {
+  order: 2;
+  flex: 1.5;
+  background: url(images/infinoteNodeMapFinal.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 140%;
+  background-position: center;
+  flex-grow: 50%;
+  transform: rotate(180deg);
+  height: 100vh;
+}
+
+.nodeMap p {
+  vertical-align: middle;
+  /*text-align: center;*/
+}
+
+.feature-descrip {
+  font-family: calluna;
+  font-weight: normal;
+  font-size: 3.3em;
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  color: gold;
+  z-index: 6;
+  order: 2;
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 6vw;
+}
+
+.annotate {
+  order: 14;
+  display: flex;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.annotatePic {
+  order: 1;
+  flex: 1.5;
+  background: url(images/EditorialNotesPics1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  background-position: right;
+  height: 120vh;
+  transition: 1s ease;
+}
+
+.annotatePic:hover {
+  order: 1;
+  flex: 1.5;
+  background: url(images/EditorialNotesPics12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  background-position: right;
+  height: 120vh;
+  transition: 1s ease;
+}
+
+.annotate p {
+}
+
+.widget {
+  order: 70;
+  display: flex;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.widgetPic {
+  order: 1;
+  flex: 1.5;
+  background: url(images/infinoteWidget2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 130%;
+  background-position: left;
+  height: 100vh;
+}
+
+a {
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+}
+
+.widget p {
+  vertical-align: middle;
+  margin-right: 10vw;
+}
+
+.highlight {
+  order: 80;
+  display: flex;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.highlightPic {
+  order: 2;
+  flex: 1.6;
+  background: url(images/highlightPic.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 90%;
+  background-position: right;
+  height: 120vh;
+
+}
+
+.highlight p {
+}
+
+.personal {
+  order: 90;
+  display: flex;
+  padding-top: 6vh;
+  padding-bottom: 16vh;
+}
+
+.personalPic {
+  order: 1;
+  flex: 1.8;
+  background: url(images/infinote_personal2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 90%;
+  background-position: center;
+  height: 120vh;
+}
+
+.personal p {
+  margin-right: 12vw;
+}
+
+.colophon {
+  order: 100;
+  font-family: Calluna, serif;
+  font-size: .9em;
+  text-align: right;
+  margin-top: 1vh;
+  color: white;
+  background-color: gold;
+  width: 97vw;
+  padding-top: 170px;
+  padding-bottom: 63px;
+  padding-right: 50px;
+}
+
+section.annotate, section.nodeMap, section.highlight, section.widget {
+  margin: 0;
+  padding-top: 0vh !important;
+  padding-bottom: 1vh !important;
+}
+
+section.highlight {
+  padding-top: 18vh !important;
+  padding-bottom: 10vh !important;
+}
+
+.features > p, .annotate > p, .anatomy > p, .nodeMap > p, .highlight > p, .widget > p {
+  /*border: solid blue 2px;*/
+  /*margin: 0;*/
+}
+
+.highlight > div, .widget > div {
+  height: 60vh;
+}
+
+.features > div, .annotate > div, .anatomy > div, .nodeMap > div, .highlight > div, .widget > div {
+  /*border: red solid 1px;*/
+  margin: 0;
+  padding: 0;
+}
+
+/*.features {
+  height: 100vh;
+  padding-top: 10vh;
+  order: 20;
+  background-color: teal;
+}
+
+.featurePics {
+  position: relative;
+  left: -350px;
+  float: left;
+}
+
+.featurePics:hover {
+  position: relative;
+  left: -350px;
+  display: none;
+}
+
+.featurePics2 {
+  position: relative;
+  left: -350px;
+  z-index: 4;
+}
+
+.features > p {
+  font-family: calluna;
+  font-weight: normal;
+  font-size: 3em;
+  display: inline-block;
+  width: 400px;
+  position: relative;
+  left: 60vw;
+  top: 80vh;
+  z-index: 6;
+}*/
+
+@media (max-width: 768px) {
+    body {
+        /*width: 90%;*/
+        font-size: .8em;
+        margin-left: auto;
+        margin-right: auto;
+        /*flex-flow: column nowrap;*/
+        /*padding-left: 10px;*/
+        /*padding: 10px;*/
+    }
+
+    .header {
+      position: static;
+    }
+
+    .title {
+      /*border: red solid 2px;*/
+      margin-top: -40vh;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      position: static;
+      height: 20vh;
+      /*text-shadow: white 0px 0px 10px;*/
+      transform: scale(1.3);
+    }
+
+    h1 {
+      /*border: red solid 1px;*/
+    }
+
+    .title > .descrip {
+      line-height: 1.4;
+      /*padding-top: 20px;*/
+      margin-top: 1vh;
+      display: inline-block;
+      width: 130px;
+      /*border: red solid 2px;*/
+    }
+
+    .learn {
+      background-color: rgba(255, 255, 255, .8);
+    }
+
+    .sign-up {
+      font-size: 1.1em;
+    }
+
+    .top-img {
+      width: 100%;
+      background-size: cover;
+      opacity: .1;
+      transition: 1s;
+    }
+
+    #loginPic {
+      width: 102%;
+    }
+
+    #loginPic.appears {
+      width: 102%;
+      border: none;
+    }
+
+    .loginScreen > * {
+      display: none;
+    }
+
+    .overlay {
+      background: white;
+    }
+
+    .intro {
+      padding-bottom: 8vh;
+    }
+
+    .intro > p, .intro > h3, .intro > .listP {
+      padding: 2%;
+      width: 80vw;
+
+      margin-top: -1vh;
+    }
+
+    .intro > h3 {
+      text-align: left;
+      margin-top: 8vh;
+    }
+
+    .anatomy {
+      /*order: 10;*/
+      /*display: flex;*/
+      /*flex-flow: column;*/
+      /*padding-left: 6vw;*/
+    }
+
+    .features, .annotate, .anatomy, .nodeMap, .highlight, .widget, .personal {
+      flex-wrap: wrap;
+    }
+
+    .features > *, .annotate > *, .anatomy > *, .nodeMap > *, .highlight > *, .widget > *, .personal > *{
+      flex: none;
+      width: 100%;
+    }
+
+    .features > p, .annotate > p, .anatomy > p, .nodeMap > p, .highlight > p, .widget > p, .personal > p {
+      order: 1;
+      /*border: solid blue 2px;*/
+      height: inherit;
+      margin: 0;
+      margin-bottom: 1vh;
+      padding: 4vw;
+      padding-left: 6vw;
+      max-width: 89vw;
+    }
+
+    .features > div, .annotate > div, .anatomy > div, .nodeMap > div, .highlight > div, .widget > div, .personal > div {
+      order: 2;
+      /*border: red solid 1px;*/
+      margin: 0;
+      display: inline-block;
+      padding: 0;
+    }
+
+    .annotate > div, .anatomy > div, .personal > div {
+      height: 80vh;
+      transition: 0;
+    }
+
+    .nodeMap > p {
+      position: relative;
+      top: 20vh;
+    }
+
+    .nodeMap > div {
+      position: relative;
+      top: -29vh;
+      opacity: .7;
+      transition: .5s;
+    }
+
+    .nodeMap > div:hover {
+      opacity: .4;
+      transition: .5s;
+    }
+
+    .widget {
+      position: relative;
+      top: -16vh;
+    }
+
+    .highlight > div {
+      background: url(images/infinote_highlight_mobile.png);
+      background-repeat: no-repeat;
+      margin: 5px;
+      background-size: contain;
+      height: 35vh;
+      width: 97vw;
+      background-position: center;
+    }
+
+    .widget > div {
+      width: 100vw;
+      height: 40vh;
+      /*background-size: contain;*/
+      transform: scale(1.5);
+      transform: translateX(-10vw);
+    }
+
+    .colophon {
+      order: 100;
+      font-family: Calluna, serif;
+      font-size: .9em;
+      text-align: right;
+      margin-top: 1vh;
+      color: white;
+      background-color: gold;
+      width: 87.5vw;
+      padding-top: 170px;
+      padding-bottom: 63px;
+      padding-right: 50px;
+    }
+
+    /*.anatomyPic {
+      order: 2;
+      flex-grow: 50%;
+      height: 90vh;
+      border: red solid 4px;
+    }
+
+    .anatomy p {
+      order: 1;
+    }*/
