@@ -1,0 +1,513 @@
+html, body {
+  /*width: 600px;
+  font-size: 18px;
+  font-family: Khula;
+  margin-left: auto;
+  margin-right: auto;*/
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+article, section {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+div.center-caption {
+  text-align: left;
+}
+
+p {
+  width: 600px;
+  font-size: 18px;
+  font-family: Khula;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+h1 {
+  font-family: Rubik, Londrina Solid, sans-serif;
+  /*font-size: 100px;*/
+  /*font-size: 6.2em;*/
+  font-size: 8vw;
+  letter-spacing: 1px;
+  margin-top: 100px;
+  margin-bottom: 0px;
+  background-color: white;
+  /*width: 500px;*/
+  width: 37%;
+  /*padding: 50px;*/
+  padding: 6%;
+  padding-right: 10%;
+  /*padding-right: 90px;*/
+  padding-bottom: 100px;
+  margin-left: 160px;
+  border-radius: 8px;
+}
+
+.thinner {
+  /*font-weight: lighter;*/
+  font-size: .8em;
+}
+
+.subhead {
+  text-align: left;
+  font-family: Rubik, Khula, Share;
+  margin: 0;
+}
+
+.byline {
+  text-align: left;
+  font-family: Rubik, Khula, Share;
+  font-size: 1.2em;
+  padding-bottom: 100px;
+  position: relative;
+  /*top: 510px;
+  left: 225px;*/
+  /*padding-top: 10vw;*/
+  margin-top: -4em;
+  /*margin-left: 216px;*/
+  left: 6.6vw;
+  margin-left: 160px;
+}
+
+.lede {
+  font-size: 1.6em;
+  /*width: 70%;*/
+  padding: 80px;
+  position: relative;
+  /*top: 40%;*/
+  /*margin-top: 200px;*/
+  /*margin-bottom: 30px;*/
+  color: blue;
+}
+
+aside {
+  font-size: 3.2em;
+  font-family: Permanent Marker;
+  padding: 30px;
+  width: 70%;
+  padding-left: 20%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  color: blue;
+}
+
+.question {
+  padding-top: 30px;
+  font-weight: bolder;
+  font-family: Rubik, sans-serif;
+  position: relative;
+  line-height: 1.5em;
+  letter-spacing: .8px;
+  left: -30px;
+}
+
+.divider {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Permanent Marker;
+  font-size: 8em;
+  transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
+  width: 100%;
+  padding: 0;
+  margin-top: -150px;
+  margin-bottom: -70px;
+  color: blue;
+}
+
+.top-img {
+  width: 100vw;
+  /*min-height: 100vh;*/
+  border-radius: 0;
+  margin-bottom: 50px;
+  position: absolute;
+  z-index: -2;
+  overflow: hidden;
+  padding: 0;
+  background-image: url(https://i.ytimg.com/vi/Zzw9AN8kBOc/maxresdefault.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0;
+  top: 0;
+  /*border: red solid 1px;*/
+}
+
+img.top-img {display: none;}
+
+
+.img-wrap {
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  padding: 0px;
+  /*border: red solid 1px;*/
+
+}
+
+/*.img {
+  margin: 40px;
+  width: 90%;
+  border-radius: 50%;
+  transition: 3s ease;
+  background-image:image(JonKule.jpg);
+}*/
+
+
+img.round-img {
+  position: relative;
+  margin: 0;
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 50%;
+  transition: 1.5s ease;
+  /*background-image:image(JonKule.jpg);
+  background-repeat: no-repeat;*/
+  overflow: hidden;
+  width: 70%;
+  box-sizing: border-box;
+  border: 0px white solid;
+}
+
+img.round-img:hover {
+  border-radius: 0;
+  width: 70%;
+  transition: 0.5s ease;
+}
+
+.mobile-caption {
+  position: relative;
+  display: inline-block;
+  font-family: Share;
+  font-weight: light;
+  color: blue;
+  margin-top: -12px;
+  margin-left: 40vw;
+  display: none;
+}
+
+.absolute1 {
+  position: absolute;
+  top: 1300px;
+  width: 800px;
+  left: -200px;
+  z-index: -2;
+  opacity: 30%;
+  transform: rotate(20deg);
+  transition: 2s ease;
+}
+
+.absolute2 {
+  position: absolute;
+  top: 7000px;
+  width: 600px;
+  left: -10%;
+  z-index: -2;
+  opacity: 30%;
+  transform: rotate(-40deg);
+}
+
+.absolute3 {
+  position: absolute;
+  top: 2500px;
+  width: 300px;
+  right: 120px;
+  z-index: -2;
+  opacity: 30%;
+  transform: rotate(-30deg);
+}
+
+.absolute4 {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  left: 600px;
+  opacity: 30%;
+  transition: 2s ease;
+  z-index: 6;
+}
+
+.absolute4 img{
+  transform: rotate(-30deg);
+}
+
+.absolute4:hover {
+  left: 1600px;
+  transition: 1s ease;
+  z-index: 6;
+}
+
+.container {
+  position: absolute;
+  top: 4000px;
+  display: inline-block;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.absolute6 {
+
+    position: relative;
+    margin: 0;
+    left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-20deg);
+}
+
+.container6 {
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container{
+  background-image: image(JonBand.jpg);
+  background-repeat: no-repeat;
+}
+
+.caption {
+  position: relative;
+  display: inline-block;
+  top: 80px;
+  left: 72%;
+  font-style: italic;
+  font-family: Share;
+  font-weight: lighter;
+  color: blue;
+  text-align: right;
+}
+
+section.header {
+  margin-bottom: 0px;
+}
+
+.marker {
+  font-family: Permanent Marker;
+  color: blue;
+}
+
+.credit {
+  font-size: 1em;
+  font-family: Share;
+  /*position: relative:*/
+  margin-top: 80px;
+  text-align: right;
+  line-height: 1.3;
+}
+
+/*MOBILE*/
+
+@media (max-width: 1700px) {
+  .top-img {
+    background-size: contain;
+    height: 90vw;
+  }
+ .lede {
+    margin-top: 80px;
+    /*background-color: green;*/
+  }
+}
+
+@media (max-width: 1300px) {
+  .top-img {
+    background-size: auto;
+    height: 90vw;
+  }
+ .lede {
+    margin-top: 80px;
+    /*background-color: aqua;*/
+  }
+}
+
+@media (max-width: 1100px) {
+  .top-img {
+    height: 73vw;
+  }
+
+ .lede {
+  /*background-color: pink;*/
+  }
+}
+
+@media (max-width:850px) {
+ .lede {
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
+    /*background-color: yellow;*/
+  }
+
+    div.center-caption {
+    text-align: center;
+   }
+
+    .caption {
+      position: relative;
+      left: 20px;
+      display: none;
+    }
+
+    .mobile-caption {
+      position: relative;
+      display: inline-block;
+      font-family: Share;
+      font-weight: light;
+      color: blue;
+      margin-top: 0px;
+      /*margin-left: 50vw;*/
+      margin: 0 auto;
+    }
+}
+
+@media (max-width:768px) {
+  div > h1 {
+      width: 70vw;
+    }
+
+    body, p {
+        width: 90%;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        /*padding: 10px;*/
+    }
+
+    h1 {
+      margin-left: -20px;
+      font-size: 4em;
+      width: 90%;
+      padding-top: 0;
+      margin-top: 50px;
+      padding-left: 30px;
+      padding-right: 50px;
+      padding-bottom: 40px;
+
+    }
+
+    .byline {
+      text-align: left;
+      margin: 20px;
+      padding: 0;
+      position: relative;
+      left: -6px;
+      top: -40px;
+    }
+
+    .lede {
+      font-size: 1.3em;
+      display: inline-block;
+      width: 80%;
+      /*margin-top: 24vh;*/
+      /*margin-top: 40vw;*/
+      margin-top: 54vw;
+      padding: 0;
+      margin-left: 25px;
+      color: blue;
+      /*background-color: orange;*/
+    }
+
+    .divider {
+      margin-top: -60px;
+      margin-bottom: -40px;
+
+    }
+
+    .top-img {
+      width: 100%;
+      background-size: contain;
+      /*margin: -20px;*/
+      padding: 0;
+      top: 320px;
+      margin-bottom: 3vh;
+    }
+
+    .question {
+      left: 0px;
+      padding-top: 15px;
+    }
+
+    .answer {
+      margin-bottom: 0px;
+    }
+
+    aside {
+      font-size: 2em;
+      font-family: Permanent Marker;
+      width: 90%;
+      display: inline-block;
+      position: relative;
+      left: 6%;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 0;
+      color: blue;
+    }
+
+    .absolute1 {
+      width: 400px;
+      transition: 1s ease-in-out;
+    }
+
+    .absolute2 {
+      width: 300px;
+      transition: 1s ease-in-out;
+    }
+
+    /*img-wrap {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 4%;
+    }*/
+
+    img.round-img {
+      position: relative;
+      margin:0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      border-radius: 50%;
+      transition: 3s ease;
+      /*background-image:image(JonKule.jpg);
+      background-repeat: no-repeat;*/
+      overflow: hidden;
+      width: 100%;
+      /*border: red;*/
+    }
+
+    img.round-img:hover {
+        width: 100%;
+    }
+
+    .absolute6 {
+      display: none;
+    }
+
+    section.header {
+      margin-bottom: 100px;
+      return;
+    }
+  }
+
+  @media (max-width:683px) {
+    .top-img {
+      top: 380px;
+    }
+   .lede {
+     top: 0vw;
+      /*background-color: skyblue;*/
+    }
+  }
