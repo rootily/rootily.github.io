@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas" width="648" height="320"></canvas>
 
 <script>
 	// JavaScript code goes here
@@ -18,18 +18,19 @@
   var ctx = canvas.getContext("2d");
   var x = canvas.width/2;
   var y = canvas.height-30;
-  var dx = 3;
-  var dy = -3;
-  var ballRadius = 10;
+  var dx = 4;
+  var dy = -4;
+  var ballRadius = 4;
   var ballColor = "#0095DD";
-  var paddleHeight = 10;
-  var paddleWidth = 75;
+  var paddleColor = "#0095DD";
+  var paddleHeight = 4;
+  var paddleWidth = 160;
   var paddleX = (canvas.width-paddleWidth) / 2;
   var rightPressed = false;
   var leftPressed = false;
 
   var brickRowCount = 4;
-  var brickColumnCount = 5;
+  var brickColumnCount = 7;
   var brickWidth = 75;
   var brickHeight = 20;
   var brickPadding = 10;
@@ -83,10 +84,13 @@
             if(b.status == 1) {
                 if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
                     dy = -dy;
+                    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                    ballColor = randomColor;
+                    paddleColor = randomColor;
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATULATIONS!");
+                        alert("Congratulations! You won. :)");
                         document.location.reload();
                     }
                 }
@@ -106,7 +110,7 @@
   function drawPaddle() {
       ctx.beginPath();
       ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-      ctx.fillStyle = "#0095DD";
+      ctx.fillStyle = paddleColor;
       ctx.fill();
       ctx.closePath();
   }
@@ -121,7 +125,7 @@
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
+                ctx.fillStyle = "white";
                 ctx.fill();
                 ctx.closePath();
               }
@@ -130,55 +134,63 @@
   }
 
   function drawScore() {
-      ctx.font = "16px Arial";
-      ctx.fillStyle = "#0095DD";
-      ctx.fillText("Score: " + score, 8, 20);
+      ctx.font = "14px Arial";
+      ctx.fillStyle = "#AAA";
+      ctx.fillText("Score: " + score, brickOffsetTop, 20);
   }
 
   function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+    ctx.font = "14px Arial";
+    ctx.fillStyle = "#AAA";
+    ctx.fillText("Lives: "+lives, canvas.width-50-brickOffsetTop, 20);
 }
 
   function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
       drawBricks();
       drawBall();
       drawPaddle();
       drawScore();
       drawLives();
       collisionDetection();
+
       x += dx;
       y += dy;
 
       //ball bounce left/right
       if(x + ballRadius > canvas.width || x - ballRadius < 0) {
           dx = -dx;
-          ballColor = "rgba(100, 100, 100, 1)";
+          ballColor = randomColor;
+          paddleColor = randomColor;
       }
 
       //ball bounce top/bottom
       if(y + dy < ballRadius) {
           dy = -dy;
+          ballColor = randomColor;
+          paddleColor = randomColor;
       } else if(y + dy > canvas.height-ballRadius) {
         //bounce if hit paddle
         if(x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
+            ballColor = randomColor;
+            paddleColor = randomColor;
         }
         //ball out of bounds, bottom
         else {
           lives--;
+          ballColor = randomColor;
           if(!lives) {
-            alert("GAME OVER");
+            alert("Sorry! You lost. :(");
             document.location.reload();
             // clearInterval(interval); // Needed for Chrome to end game
           }
           else {
             x = canvas.width/2;
             y = canvas.height-30;
-            dx = 2;
-            dy = -2;
+            dx = 4;
+            dy = -4;
             paddleX = (canvas.width-paddleWidth)/2;
           }
         }
