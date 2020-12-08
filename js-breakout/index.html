@@ -5,7 +5,7 @@
     <title>Gamedev Canvas Workshop</title>
     <style>
     	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+    	canvas { background: #efefef; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -18,21 +18,21 @@
   var ctx = canvas.getContext("2d");
   var x = canvas.width/2;
   var y = canvas.height-30;
-  var dx = 4;
-  var dy = -4;
-  var ballRadius = 4;
+  var dx = 6;
+  var dy = -6;
+  var ballRadius = 26;
   var ballColor = "#0095DD";
   var paddleColor = "#0095DD";
-  var paddleHeight = 4;
-  var paddleWidth = 160;
+  var paddleHeight = 6;
+  var paddleWidth = 170;
   var paddleX = (canvas.width-paddleWidth) / 2;
   var rightPressed = false;
   var leftPressed = false;
 
-  var brickRowCount = 4;
+  var brickRowCount = 7;
   var brickColumnCount = 7;
   var brickWidth = 75;
-  var brickHeight = 20;
+  var brickHeight = 8;
   var brickPadding = 10;
   var brickOffsetTop = 30;
   var brickOffsetLeft = 30;
@@ -180,7 +180,6 @@
         //ball out of bounds, bottom
         else {
           lives--;
-          ballColor = randomColor;
           if(!lives) {
             alert("Sorry! You lost. :(");
             document.location.reload();
@@ -189,8 +188,8 @@
           else {
             x = canvas.width/2;
             y = canvas.height-30;
-            dx = 4;
-            dy = -4;
+            dx = 6;
+            dy = -6;
             paddleX = (canvas.width-paddleWidth)/2;
           }
         }
@@ -198,13 +197,13 @@
 
       //move paddle on keypress
       if(rightPressed) {
-          paddleX += 7;
+          paddleX += 9;
           if (paddleX + paddleWidth > canvas.width){
               paddleX = canvas.width - paddleWidth;
           }
       }
       else if(leftPressed) {
-          paddleX -= 7;
+          paddleX -= 9;
           if (paddleX < 0){
               paddleX = 0;
           }
@@ -215,8 +214,5 @@
 draw();
 
 </script>
-
 </body>
-
-
 </html>
